@@ -8,7 +8,7 @@
 #include "lib6.h"
 #include "lib7.h"
 #include "lib8.h"
-//#include "lib9.h"
+#include "lib9.h"
 
 int main() {
 	lib1_f();
@@ -19,7 +19,7 @@ int main() {
 	lib6_f();
 	lib7_f();
 	lib8_f();
-	//lib9_f();
+	lib9_f();
 	sleep(50000);
 	return 42;
 }
