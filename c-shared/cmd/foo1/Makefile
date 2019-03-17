@@ -1,7 +1,8 @@
 all: foo1
 
-foo1: foo1.c lib1.so lib2.so lib3.so lib4.so lib5.so
-	gcc -I../../lib1 -I../../lib2 -I../../lib3 -I../../lib4 -I../../lib5 -o $@ $^
+#foo1: foo1.c lib1.so lib2.so lib3.so lib4.so lib5.so lib6.so lib7.so lib8.so lib9.so
+foo1: foo1.c lib1.so lib2.so lib3.so lib4.so lib5.so lib6.so lib7.so lib8.so
+	gcc -m32 -I../../lib1 -I../../lib2 -I../../lib3 -I../../lib4 -I../../lib5 -I../../lib6 -I../../lib7 -I../../lib8 -I../../lib9 -o $@ $^
 
 lib1.so:
 	make -C ../../lib1
@@ -22,6 +23,22 @@ lib4.so:
 lib5.so:
 	make -C ../../lib5
 	cp ../../lib5/lib5.so $@
+
+lib6.so:
+	make -C ../../lib6
+	cp ../../lib6/lib6.so $@
+
+lib7.so:
+	make -C ../../lib7
+	cp ../../lib7/lib7.so $@
+
+lib8.so:
+	make -C ../../lib8
+	cp ../../lib8/lib8.so $@
+
+lib9.so:
+	make -C ../../lib9
+	cp ../../lib9/lib9.so $@
 
 .PHONY: all clean
 

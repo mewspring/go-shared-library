@@ -1,7 +1,7 @@
 all: lib2.so
 
 %.so: %.go
-	go build -buildmode=c-shared -o $@ .
+	CGO_ENABLED=1 GOARCH=386 go build -buildmode=c-shared -o $@ .
 
 .PHONY: all clean
 

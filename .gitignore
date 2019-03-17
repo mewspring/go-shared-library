@@ -1,2 +1,3 @@
 *.h
 *.so
+cmd/foo1/foo1
