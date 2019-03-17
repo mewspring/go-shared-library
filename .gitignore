@@ -1,3 +1,3 @@
 *.h
 *.so
-cmd/foo1/foo1
+c-shared/cmd/foo1/foo1
